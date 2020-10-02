@@ -1,0 +1,58 @@
+try:
+    f=open('file1.txt')
+    g=f.write('this is my file')
+    print(g)
+except IOError:
+    print('you are calling wrong method')
+l1=[1,34,65,76,74]
+l2=[23,75,46,0,9]
+for i in range(len(l1)):
+    try:
+        result=l1[i]/l2[i]
+        print(result)
+    except ArithmeticError:
+        print('cant perform division due to 0 on denominator')
+    else:
+        print('success')
+
+
+
+
+
+
+
+try:
+    print(x)
+except:
+    print('An exception occured')
+
+try:
+    print(x)
+except NameError:
+    print('variable is not defined')
+except:
+    print('something else went wrong')
+
+try:
+    print('hello')
+except:
+    print('something else went wrong')
+else:
+    print('nothing else went wrong')
+try:
+    f=open('hello.txt','r+')
+    g=f.write('loral lumpsum')
+    print(g)
+except:
+    print('something else went wrong')
+
+x=int(input('enter number'))
+if x<0:
+    raise Exception('sorry no negative numbers are allowed')
+else:
+    print('success')
+x=input('enter no')
+if not type(x) is int:
+    raise TypeError('only integers are allowed')
+else:
+    print('success')
